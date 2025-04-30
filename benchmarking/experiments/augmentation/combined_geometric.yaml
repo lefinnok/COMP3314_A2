@@ -1,0 +1,52 @@
+# combined_geometric.yaml
+test_id: "combined_geometric"
+description: "MLP configuration with combined geometric augmentations (affine, rotation, perspective)"
+
+# Network architecture parameters
+architecture:
+  hidden_layers: [512, 256]
+  activations: ["relu","relu"]
+  dropout_rates: [0.5, 0.3]
+
+# Data processing parameters
+data:
+  color_mode: "grayscale"
+  batch_size: 128
+  augmentation:
+    random_affine: 
+      enabled: true
+      degrees: 10
+      translate: [0, 0.1]
+    random_rotation:
+      enabled: true
+      degrees: 15
+    random_horizontal_flip:
+      enabled: false
+    color_jitter:
+      enabled: false
+    random_erasing:
+      enabled: false
+    gaussian_blur:
+      enabled: false
+    random_crop:
+      enabled: false
+    random_perspective:
+      enabled: true
+      distortion_scale: 0.5
+      probability: 0.5
+  normalization: [0.5, 0.5]
+
+# Training configuration
+training:
+  optimizer:
+    name: "adam"
+    learning_rate: 0.001
+    weight_decay: 0.0
+  scheduler:
+    name: "step_lr"
+    step_size: 10
+    gamma: 0.7
+  epochs: 15
+  early_stopping:
+    enabled: false
+    patience: 5

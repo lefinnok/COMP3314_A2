@@ -1,0 +1,6 @@
+batch_id: "learning_rate_sweep"
+description: "Systematic exploration of learning rates with Adam optimizer"
+experiments:
+  - "learning_rates_30_epoch/lr_very_low.yaml"
+  - "learning_rates_30_epoch/lr_low.yaml"
+  - "learning_rates_30_epoch/lr_medium.yaml"

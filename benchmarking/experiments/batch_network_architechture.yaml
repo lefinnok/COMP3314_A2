@@ -1,0 +1,9 @@
+batch_id: "network_architecture_comparison"
+description: "Comparing different network depths and widths"
+experiments:
+  - "architectures/shallow_narrow.yaml"
+  - "architectures/shallow_wide.yaml"
+  - "architectures/medium_narrow.yaml"
+  - "architectures/medium_wide.yaml"
+  - "architectures/deep_narrow.yaml"
+  - "architectures/deep_wide.yaml"

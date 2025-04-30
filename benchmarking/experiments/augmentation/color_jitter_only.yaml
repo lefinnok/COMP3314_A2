@@ -1,0 +1,51 @@
+# color_jitter_only.yaml
+test_id: "color_jitter_only"
+description: "MLP configuration with only color jitter augmentation"
+
+# Network architecture parameters
+architecture:
+  hidden_layers: [512, 256]
+  activations: ["relu","relu"]
+  dropout_rates: [0.5, 0.3]
+
+# Data processing parameters
+data:
+  color_mode: "grayscale"
+  batch_size: 128
+  augmentation:
+    random_affine: 
+      enabled: false
+    random_rotation:
+      enabled: false
+    random_horizontal_flip:
+      enabled: false
+    color_jitter:
+      enabled: true
+      brightness: 0.2
+      contrast: 0.2
+      saturation: 0.2
+      hue: 0.1
+    random_erasing:
+      enabled: false
+    gaussian_blur:
+      enabled: false
+    random_crop:
+      enabled: false
+    random_perspective:
+      enabled: false
+  normalization: [0.5, 0.5]
+
+# Training configuration
+training:
+  optimizer:
+    name: "adam"
+    learning_rate: 0.001
+    weight_decay: 0.0
+  scheduler:
+    name: "step_lr"
+    step_size: 10
+    gamma: 0.7
+  epochs: 15
+  early_stopping:
+    enabled: false
+    patience: 5

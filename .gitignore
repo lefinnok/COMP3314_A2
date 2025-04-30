@@ -1,0 +1,7 @@
+.venv
+__MACOSX/data
+benchmarking/__pycache__
+data
+data.zip
+results/learning_rate_sweep
+benchmarking/results/baseline_mlp

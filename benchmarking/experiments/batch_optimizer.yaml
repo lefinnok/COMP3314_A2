@@ -1,0 +1,9 @@
+batch_id: "optimizer_comparison"
+description: "Comparing different optimizers and their configurations"
+experiments:
+  - "optimizers/adam_default.yaml"
+  - "optimizers/sgd_low_momentum.yaml"
+  - "optimizers/sgd_high_momentum.yaml"
+  - "optimizers/rmsprop_default.yaml"
+  - "optimizers/adam_weight_decay.yaml"
+  - "optimizers/sgd_nesterov.yaml"

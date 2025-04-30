@@ -1,0 +1,11 @@
+batch_id: "augmentation_techniques"
+description: "Evaluating the effectiveness of different data augmentation strategies"
+experiments:
+  - "augmentation/no_augmentation.yaml"
+  - "augmentation/affine_only.yaml"
+  - "augmentation/rotation_flip_only.yaml"
+  - "augmentation/erasing_only.yaml"
+  - "augmentation/perspective_only.yaml"
+  - "augmentation/color_jitter_only.yaml"
+  - "augmentation/combined_geometric.yaml"
+  - "augmentation/combined_all.yaml"

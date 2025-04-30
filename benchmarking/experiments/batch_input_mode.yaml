@@ -1,0 +1,8 @@
+batch_id: "input_mode_comparison"
+description: "Comparing grayscale vs RGB input processing strategies"
+experiments:
+  - "input_modes/grayscale_baseline.yaml"
+  - "input_modes/rgb_baseline.yaml"
+  - "input_modes/grayscale_optimized.yaml"
+  - "input_modes/rgb_optimized.yaml"
+  - "input_modes/rgb_with_color_augmentation.yaml"

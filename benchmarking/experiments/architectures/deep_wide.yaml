@@ -1,0 +1,39 @@
+# deep_wide.yaml
+test_id: "deep_wide_mlp"
+description: "MLP with 4 hidden layers with [1024, 512, 256, 128] neurons"
+
+# Network architecture parameters
+architecture:
+  hidden_layers: [1024, 512, 256, 128]
+  activations: ["relu", "relu", "relu", "relu"]
+  dropout_rates: [0.5, 0.5, 0.4, 0.3]
+
+# Data processing parameters
+data:
+  color_mode: "grayscale"
+  batch_size: 128
+  augmentation:
+    random_affine: 
+      enabled: true
+      degrees: 10
+      translate: [0, 0.1]
+    random_rotation:
+      enabled: false
+    random_horizontal_flip:
+      enabled: false
+  normalization: [0.5, 0.5]
+
+# Training configuration
+training:
+  optimizer:
+    name: "adam"
+    learning_rate: 0.001
+    weight_decay: 0.0
+  scheduler:
+    name: "step_lr"
+    step_size: 10
+    gamma: 0.7
+  epochs: 15
+  early_stopping:
+    enabled: false
+    patience: 5

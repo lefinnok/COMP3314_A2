@@ -1,0 +1,10 @@
+batch_id: "activation_function_comparison"
+description: "Comparing different activation functions and mixed activations"
+experiments:
+  - "activations/relu_all.yaml"
+  - "activations/leaky_relu_all.yaml"
+  - "activations/selu_all.yaml"
+  - "activations/tanh_all.yaml"
+  - "activations/gelu_all.yaml"
+  - "activations/mixed_progressive.yaml"
+  - "activations/mixed_alternate.yaml"

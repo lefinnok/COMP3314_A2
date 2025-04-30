@@ -1,0 +1,10 @@
+batch_id: "regularization_techniques"
+description: "Examining the impact of various regularization approaches"
+experiments:
+  - "regularization/no_regularization.yaml"
+  - "regularization/light_dropout.yaml"
+  - "regularization/medium_dropout.yaml"
+  - "regularization/heavy_dropout.yaml"
+  - "regularization/weight_decay_low.yaml"
+  - "regularization/weight_decay_medium.yaml"
+  - "regularization/combined_optimal.yaml"
